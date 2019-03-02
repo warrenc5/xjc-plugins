@@ -1,0 +1,116 @@
+<jxb:bindings version="2.0"
+jxb:extensionBindingPrefixes="xjc hj mofokom orm"
+               xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:hj="http://hyperjaxb3.jvnet.org/ejb/schemas/customizations"
+               xmlns:orm="http://java.sun.com/xml/ns/persistence/orm"
+               xmlns:mofokom="http://www.mofokom.biz/xjc/transient"
+               xs:schemaLocation="
+               http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd
+               http://hyperjaxb3.jvnet.org/ejb/schemas/customizations file:///opt/schema/hyperjaxb.xsd
+               http://java.sun.com/xml/ns/persistence/orm file:///opt/schema/orm_2_0.xsd
+               "
+               >
+
+    <jxb:bindings schemaLocation="rss-2_0.xsd" node="/xs:schema">
+
+        <jxb:globalBindings
+        generateIsSetMethod="true"
+        optionalProperty="primitive"
+        >
+            <jxb:serializable uid="1"/>
+        </jxb:globalBindings>
+
+        <jxb:schemaBindings>
+            <jxb:package name="rss"/>
+        </jxb:schemaBindings>
+
+        <jxb:bindings node="xs:complexType[@name='RssChannel']/xs:sequence/xs:element[@name='skipHours']">
+            <hj:one-to-many target-entity="SkipHour.class">
+                <orm:join-table/>
+            </hj:one-to-many>
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:complexType[@name='RssChannel']/xs:sequence/xs:element[@name='skipDays']">
+            <hj:one-to-many target-entity="SkipDay.class">
+                <orm:join-table />
+            </hj:one-to-many>
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:simpleType[@name='SkipDay']">
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:simpleType[@name='SkipHour']">
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:complexType[@name='SkipDaysList']">
+            <hj:ignored/>
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:complexType[@name='SkipHoursList']">
+            <hj:ignored/>
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:complexType[@name='Guid']">
+            <mofokom:transient>hjid</mofokom:transient>
+            <hj:embeddable/>
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:element[@name='rss']">
+            <mofokom:transient>hjid</mofokom:transient>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='Category']">
+            <mofokom:transient>hjid</mofokom:transient>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='Cloud']">
+            <mofokom:transient>hjid</mofokom:transient>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='Image']">
+            <mofokom:transient>hjid</mofokom:transient>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='Source']">
+            <mofokom:transient>hjid</mofokom:transient>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='TextInput']">
+            <mofokom:transient>hjid</mofokom:transient>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='RssChannel']">
+            <mofokom:transient>hjid</mofokom:transient>
+            <hj:entity>
+                <orm:table>
+                    <orm:unique-constraint>
+                        <orm:column-name>title</orm:column-name>
+                    </orm:unique-constraint>
+                </orm:table>
+            </hj:entity>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='RssItem']">
+            <mofokom:transient>hjid</mofokom:transient>
+            <hj:entity>
+                <orm:table>
+                    <orm:unique-constraint>
+                        <orm:column-name>Guid_Value</orm:column-name>
+                    </orm:unique-constraint>
+                </orm:table>
+            </hj:entity>
+        </jxb:bindings>
+        <jxb:bindings node="xs:complexType[@name='Enclosure']">
+            <mofokom:transient>hjid</mofokom:transient>
+            <hj:entity>
+                <orm:table>
+                    <orm:unique-constraint>
+                        <orm:column-name>url</orm:column-name>
+                    </orm:unique-constraint>
+                </orm:table>
+            </hj:entity>
+        </jxb:bindings>
+
+        <jxb:bindings node="xs:complexType[@name='RssChannel']/xs:sequence/xs:element[@name='item']">
+            <hj:one-to-many>
+                <orm:join-table/>
+            </hj:one-to-many>
+        </jxb:bindings>
+
+    </jxb:bindings>
+
+</jxb:bindings>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>xjc-plugins</artifactId>
+        <groupId>mofokom</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>mofokom</groupId>
+    <artifactId>xjc-transient</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>xjc-transient</name>
+    <packaging>jar</packaging>
+    <url>http://www.mofokom.biz/site/${groupId}/${artifactId}/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>mofokom-public</id>
+            <name>mofokom-public</name>
+            <url>http://www.mofokom.biz/maven/snapshots-public</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+        <site>
+            <id>mofokom</id>
+            <url>scp://www.mofokom.biz:8822/var/www/mofokom/site/${groupId}/${artifactId}</url>
+        </site>
+    </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-xjc</artifactId>
+            <version>${xjc.version}</version>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>org.jvnet.jaxb2_commons</groupId>
+            <artifactId>tools</artifactId>
+            <version>0.4.1.5</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.2.7</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-core</artifactId>
+            <version>2.2.7</version>
+        </dependency>
+    </dependencies>
+</project>
+

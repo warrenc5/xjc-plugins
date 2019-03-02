@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TestWebServiceSessionBeanRemoteService" targetNamespace="http://mofokom.eu/test/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://mofokom.eu/test/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://mofokom.eu/test/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://mofokom.eu/test/">
+  <xsd:element name="MyException" type="tns:MyException"/>
+  <xsd:complexType name="MyException">
+    <xsd:sequence/>
+  </xsd:complexType>
+  <xsd:element name="sendMessageToSleeWithCallback" nillable="true" type="xsd:string"/>
+  <xsd:element name="sendMessageToSleeWithCallbackResponse" nillable="true" type="xsd:anyType"/>
+  <xsd:element name="sendMessageToSlee" nillable="true" type="xsd:string"/>
+  <xsd:element name="sendMessageToSleeResponse" nillable="true" type="xsd:anyType"/>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MyException">
+    <wsdl:part name="MyException" element="tns:MyException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendMessageToSleeResponse">
+    <wsdl:part name="sendMessageToSleeResponse" element="tns:sendMessageToSleeResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendMessageToSleeWithCallbackResponse">
+    <wsdl:part name="sendMessageToSleeWithCallbackResponse" element="tns:sendMessageToSleeWithCallbackResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendMessageToSlee">
+    <wsdl:part name="sendMessageToSlee" element="tns:sendMessageToSlee">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendMessageToSleeWithCallback">
+    <wsdl:part name="sendMessageToSleeWithCallback" element="tns:sendMessageToSleeWithCallback">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TestWebService">
+    <wsdl:operation name="sendMessageToSleeWithCallback">
+      <wsdl:input name="sendMessageToSleeWithCallback" message="tns:sendMessageToSleeWithCallback">
+    </wsdl:input>
+      <wsdl:output name="sendMessageToSleeWithCallbackResponse" message="tns:sendMessageToSleeWithCallbackResponse">
+    </wsdl:output>
+      <wsdl:fault name="MyException" message="tns:MyException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageToSlee">
+      <wsdl:input name="sendMessageToSlee" message="tns:sendMessageToSlee">
+    </wsdl:input>
+      <wsdl:output name="sendMessageToSleeResponse" message="tns:sendMessageToSleeResponse">
+    </wsdl:output>
+      <wsdl:fault name="MyException" message="tns:MyException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestWebServiceSessionBeanRemoteServiceSoapBinding" type="tns:TestWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="sendMessageToSleeWithCallback">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendMessageToSleeWithCallback">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendMessageToSleeWithCallbackResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MyException">
+        <soap:fault name="MyException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessageToSlee">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendMessageToSlee">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendMessageToSleeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="MyException">
+        <soap:fault name="MyException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestWebServiceSessionBeanRemoteService">
+    <wsdl:port name="TestWebServicePort" binding="tns:TestWebServiceSessionBeanRemoteServiceSoapBinding">
+      <soap:address location="http://localhost:9090/TestWebServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

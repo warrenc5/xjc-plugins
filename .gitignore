@@ -1,0 +1,6 @@
+nb_jr_remoting.cfg
+target
+pom-deploy.xml
+*.jar
+*.tar
+build
