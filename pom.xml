@@ -6,7 +6,20 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <name>XJC Plugins</name>
-    <url></url>
+    <url xmlns:mvn="http://maven.apache.org/POM/4.0.0">https://github.com/warrenc5/xjc-plugins</url>
+    <description>A collection of XJC plugins</description>
+    <licenses>
+        <license>
+            <name>The GNU Lesser General Public License, Version 3.0</name>
+            <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Warren Crossing</name>
+        </developer>
+    </developers>
     <properties>
         <xjc.version>2.2.11</xjc.version>
     </properties>
@@ -169,4 +182,24 @@
             </plugin>
         </plugins>
     </reporting>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/
+            </url>
+        </repository>
+    </distributionManagement>
+     
+    <scm>
+        <connection>scm:git:https://github.com/warrenc5/xjc-plugins.git</connection>
+        <developerConnection>scm:git:https://github.com/warrenc5/xjc-plugins.git</developerConnection>
+        <url>https://github.com/warrenc5/xjc-plugins</url>
+        <tag>HEAD</tag>
+    </scm>
+
+
 </project>
