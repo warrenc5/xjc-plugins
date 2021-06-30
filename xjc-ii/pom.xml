@@ -4,7 +4,7 @@
     <parent>
         <artifactId>xjc-plugins</artifactId>
         <groupId>mofokom</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <groupId>mofokom</groupId>
     <artifactId>xjc-ii</artifactId>
