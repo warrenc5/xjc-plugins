@@ -27,23 +27,6 @@ import org.xml.sax.SAXException;
 
 public class HashcodePlugin extends Plugin {
 
-    /***
-    @Override
-    public int hashCode() {
-        return Objects.hash(this.toArray());
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        return object != null && object.getClass() == this.getClass() && Arrays.equals(this.toArray(), ((FitRoute) object).toArray());
-    }
-
-    private Object[] toArray() {
-        return new Object[]{this.id, this.ride, this.route, this.user};
-    }
-    ***/
-
-
     public String getOptionName() {
         return "Xhashcode";
     }
