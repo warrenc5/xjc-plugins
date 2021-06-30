@@ -5,7 +5,7 @@
     <parent>
         <artifactId>xjc-plugins</artifactId>
         <groupId>biz.mofokom</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>xjc-nilable</artifactId>
     <name>xjc-nilable</name>
