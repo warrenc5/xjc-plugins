@@ -4,7 +4,7 @@
     <parent>
         <artifactId>xjc-plugins</artifactId>
         <groupId>biz.mofokom</groupId>
-        <version>1.0.1</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
     <artifactId>xjc-clone</artifactId>
     <name>xjc-clone</name>
