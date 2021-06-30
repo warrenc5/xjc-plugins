@@ -7,24 +7,9 @@
         <groupId>mofokom</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>mofokom</groupId>
     <artifactId>xjc-jaxws-addressing</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <url>http://www.mofokom.biz/site/${groupId}/${artifactId}/</url>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>mofokom-public</id>
-            <name>mofokom-public</name>
-            <url>http://www.mofokom.biz/maven/snapshots-public</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-        <site>
-            <id>mofokom</id>
-            <url>scp://www.mofokom.biz:8822/var/www/mofokom/site/${groupId}/${artifactId}</url>
-        </site>
-    </distributionManagement>
     <properties>
-        <cxf.version>2.5.9</cxf.version>
+        <cxf.version>3.4.4</cxf.version>
     </properties>
     <build>
         <plugins>
@@ -34,7 +19,6 @@
                 <version>${cxf.version}</version>
                 <executions>
                     <execution>
-                        <id>generate-sources</id>
                         <phase>generate-test-sources</phase>
                         <configuration>
                             <wsdlOptions>
@@ -64,25 +48,12 @@
                     </dependency>
                     -->
                     <dependency>
-                        <groupId>mofokom</groupId>
+                        <groupId>${project.groupId}</groupId>
                         <artifactId>xjc-debug</artifactId>
-                        <version>${pom.version}</version>
+                        <version>${project.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-xjc</artifactId>
-            <version>${xjc.version}</version>
-        </dependency>
-    </dependencies>
 </project>

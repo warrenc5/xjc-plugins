@@ -7,55 +7,7 @@
         <groupId>mofokom</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>mofokom</groupId>
     <artifactId>xjc-equals</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <name>xjc-equals</name>
-    <url>http://www.mofokom.biz/site/${groupId}/${artifactId}/</url>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>mofokom-public</id>
-            <name>mofokom-public</name>
-            <url>http://www.mofokom.biz/maven/snapshots-public</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-        <site>
-            <id>mofokom</id>
-            <url>scp://www.mofokom.biz:8822/var/www/mofokom/site/${groupId}/${artifactId}</url>
-        </site>
-    </distributionManagement>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.3</version>
-                    <configuration>
-                        <source>1.6</source>
-                        <target>1.6</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-xjc</artifactId>
-            <version>${xjc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
-            <artifactId>jaxb-runtime</artifactId>
-            <version>${xjc.version}</version>
-        </dependency>
-    </dependencies>
 </project>
 

@@ -7,41 +7,13 @@
         <groupId>mofokom</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>mofokom</groupId>
     <artifactId>xjc-nilable</artifactId>
     <name>xjc-nilable</name>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-xjc</artifactId>
-            <version>${xjc.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.codemodel</groupId>
-            <artifactId>codemodel</artifactId>
-            <version>2.3</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.xml.bind</groupId>
-            <artifactId>jaxb-core</artifactId>
-            <version>2.2.7</version>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.7.4</version>
                 <executions>
                     <execution>
                         <goals>
@@ -55,7 +27,7 @@
                     <extension>true</extension>
                     <plugins>
                         <plugin>
-                            <groupId>mofokom</groupId>
+                            <groupId>${project.groupId}</groupId>
                             <artifactId>${project.artifactId}</artifactId>
                             <version>${project.version}</version>
                         </plugin>
