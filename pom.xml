@@ -4,7 +4,7 @@
     <groupId>mofokom</groupId>
     <artifactId>xjc-plugins</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>XJC Plugins</name>
     <url></url>
     <properties>
