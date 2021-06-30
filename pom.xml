@@ -22,41 +22,21 @@
     </developers>
     <properties>
         <xjc.version>2.2.11</xjc.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
-    <profiles>
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <build>
-            </build>
-            <modules>
-                <module>xjc-clone</module>
-                <module>xjc-debug</module>
-                <module>xjc-ii</module>
-                <module>xjc-jaxws-addressing</module>
-                <module>xjc-tostring</module>
-                <module>xjc-transient</module>
-                <module>xjc-nilable</module>
-                <module>xjc-validation</module>
-                <module>xjc-equals</module>
-                <module>xjc-hashcode</module>
-            </modules>
-        </profile>
-    </profiles>
-    <distributionManagement>
-        <snapshotRepository>
-            <id>mofokom-public</id>
-            <name>mofokom-public</name>
-            <url>http://www.mofokom.biz/maven/snapshots-public</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-        <site>
-            <id>mofokom</id>
-            <url>scp://www.mofokom.biz:8822/var/www/mofokom/site/air</url>
-        </site>
-    </distributionManagement>
+    <modules>
+        <module>xjc-clone</module>
+        <module>xjc-debug</module>
+        <module>xjc-ii</module>
+        <module>xjc-jaxws-addressing</module>
+        <module>xjc-tostring</module>
+        <module>xjc-transient</module>
+        <module>xjc-nilable</module>
+        <module>xjc-validation</module>
+        <module>xjc-equals</module>
+        <module>xjc-hashcode</module>
+    </modules>
     <build>
         <defaultGoal>install</defaultGoal>
         <resources>
