@@ -4,7 +4,7 @@
     <groupId>biz.mofokom</groupId>
     <artifactId>xjc-plugins</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <name>XJC Plugins</name>
     <url xmlns:mvn="http://maven.apache.org/POM/4.0.0">https://github.com/warrenc5/xjc-plugins</url>
     <description>A collection of XJC plugins</description>
@@ -178,7 +178,7 @@
         <connection>scm:git:https://github.com/warrenc5/xjc-plugins.git</connection>
         <developerConnection>scm:git:https://github.com/warrenc5/xjc-plugins.git</developerConnection>
         <url>https://github.com/warrenc5/xjc-plugins</url>
-        <tag>HEAD</tag>
+        <tag>xjc-plugins-1.0.2</tag>
     </scm>
 
 
